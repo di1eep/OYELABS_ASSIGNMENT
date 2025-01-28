@@ -1,0 +1,980 @@
+{
+	"info": {
+		"_postman_id": "28635f67-f4e9-44d1-a728-477580485b15",
+		"name": "assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31396753"
+	},
+	"item": [
+		{
+			"name": "Authuntication",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"adminname\": \"newuser1\",\r\n  \"email\":\"newUser1@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:3000/api/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"adminname\": \"newuser1\",\r\n  \"email\":\"newUser1@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd-afIesPRrG0tYddP1z7d2xtx7YUg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:08:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Admin created successfully\",\n    \"user\": {\n        \"id\": 2,\n        \"adminname\": \"newuser1\",\n        \"email\": \"newUser1@gmail.com\",\n        \"password\": \"$2a$10$h4Us8VTYsqhKQBW6htUEcOcizfibBFfgulvMZBQnqcJ/2U4u4FM4u\",\n        \"createdat\": \"2025-01-28T17:08:31.709Z\",\n        \"updatedat\": null\n    }\n}"
+						},
+						{
+							"name": "http://localhost:3000/api/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"adminname\": \"newuser1\",\r\n  \"email\":\"newUser1@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-V0HjoCsqFVp9mO3eXsuJ602s64g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:46:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Email already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/api/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"newUser1@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:3000/api/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\":\"newUser1@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "263"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"107-XDg3rsJDU7pNbkq7TN7XoLlcxXg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:12:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYWRtaW5uYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6Im5ld1VzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTczODA4NDMzNywiZXhwIjoxNzM4Njg5MTM3fQ.smre1hDYXCH8gJOJWzMSK7TVEwd8edGnkfWhpk-UoBw\"\n}"
+						},
+						{
+							"name": "http://localhost:3000/api/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\":\"newUser2@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-VmptvJVCxgMiCaKMQdd9IkNBIdc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:46:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "UserRoutes",
+			"item": [
+				{
+					"name": "create user data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John wey\",\r\n  \"email\": \"Johnwhey@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create employee data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"JohnDoe@gmail.com\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c-OpW4HwooqF+4qzqnCXX2cmAv0po\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:23:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 500,\n    \"message\": \"Something went wrong\",\n    \"error\": \"duplicate key value violates unique constraint \\\"users_email_key\\\"\"\n}"
+						},
+						{
+							"name": "create employee data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John wey\",\r\n  \"email\": \"Johnwhey@gmail.com\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-oy32npfvwTfLUQFZ3p4Yh19sZgQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:48:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"User with this email already exists.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get user data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYWRtaW5uYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6Im5ld1VzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTczODA4NDMzNywiZXhwIjoxNzM4Njg5MTM3fQ.smre1hDYXCH8gJOJWzMSK7TVEwd8edGnkfWhpk-UoBw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/user/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get Employee data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYWRtaW5uYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6Im5ld1VzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTczODA4NDMzNywiZXhwIjoxNzM4Njg5MTM3fQ.smre1hDYXCH8gJOJWzMSK7TVEwd8edGnkfWhpk-UoBw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-VawNV5D27dK5w6k/BhNl07oUuAU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:20:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Users fetched successfully\",\n    \"data\": []\n}"
+						},
+						{
+							"name": "get Employee data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYWRtaW5uYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6Im5ld1VzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTczODA4NDMzNywiZXhwIjoxNzM4Njg5MTM3fQ.smre1hDYXCH8gJOJWzMSK7TVEwd8edGnkfWhpk-UoBw",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c0-jNOsPSQ7SviVa8FABRgCSMVx88M\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:40:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User fetched successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"John poe\",\n        \"email\": \"Johndoe@gmail.com\",\n        \"createdat\": \"2025-01-28T17:39:20.743Z\",\n        \"updatedat\": \"2025-01-28T17:39:38.840Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update Employee data",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John poe\",\r\n  \"email\": \"Johndoe@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/user/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update Employee data",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John poe\",\r\n  \"email\": \"Johndoe@gmail.com\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c0-tQDpG7D+2yzs0N33G8PlwC7YEdg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:28:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"John poe\",\n        \"email\": \"Johndoe@gmail.com\",\n        \"createdat\": \"2025-01-28T17:27:12.660Z\",\n        \"updatedat\": \"2025-01-28T17:28:09.024Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete Employee data",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/user/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete Employee data",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiVXNlck5hbWUiOiJuZXd1c2VyMTIzIiwiaWF0IjoxNzMxNjU2ODE2LCJleHAiOjE3MzIyNjE2MTZ9.ZEmM_XjmuxtSImKduX6L413QqmU6V0CohEtgfAKq4CU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/user/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"user",
+										"3"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-C11hvO3LgsoNswdrjuIhgXvnAyc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jan 2025 17:29:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"User not found\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiYWRtaW5uYW1lIjoibmV3dXNlcjEiLCJlbWFpbCI6Im5ld1VzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTczODA4NDMzNywiZXhwIjoxNzM4Njg5MTM3fQ.smre1hDYXCH8gJOJWzMSK7TVEwd8edGnkfWhpk-UoBw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
