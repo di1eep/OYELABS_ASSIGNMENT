@@ -22,7 +22,7 @@ Follow the steps below to get the project up and running:
 ### 1. Clone the Repository:
    - Clone the project to your local machine using:
      ```bash
-     git clone https://github.com/your-username/express-postgres-crud-api.git
+     git clone https://github.com/di1eep/OYELABS_ASSIGNMENT
      ```
 
 ### 2. Install Dependencies:
